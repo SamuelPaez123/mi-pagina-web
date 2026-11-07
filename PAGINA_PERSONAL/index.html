@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TitanFit | Tienda Deportiva & Fitness</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= NAVEGACIÓN ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Titan<span class="highlight">Fit</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#catalogo" class="nav-link">Catálogo</a>
+        <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#aprendiz" class="nav-link">Sobre el Creador (SENA)</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Botón para abrir el carrito -->
+        <button class="cart-btn" id="openCartBtn" aria-label="Abrir Carrito">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Botón menú hamburguesa para celular -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menú móvil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= BANNER / HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">🔥 Tienda Deportiva Oficial</span>
+      <h1 class="hero-title">SUPERA TUS LÍMITES CON EL MEJOR EQUIPO</h1>
+      <p class="hero-subtitle">
+        Pesas de alta resistencia, accesorios de entrenamiento y ropa deportiva diseñada para tu máximo rendimiento.
+      </p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn btn-primary">Ver Catálogo Completo</a>
+        <a href="#aprendiz" class="btn btn-secondary">Evidencia SENA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFICIOS ================= -->
+  <section class="benefits" id="beneficios">
+    <div class="container benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Envíos Nacionales</h3>
+        <p>Envíos seguros y rápidos a toda Colombia.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <h3>Garantía de Calidad</h3>
+        <p>Materiales resistentes probados para alto impacto.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💬</div>
+        <h3>Atención por WhatsApp</h3>
+        <p>Asesoría personalizada al instante en tus pedidos.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💳</div>
+        <h3>Pagos Seguros</h3>
+        <p>Aceptamos Nequi, Daviplata y transferencias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CATÁLOGO DE PRODUCTOS ================= -->
+  <section class="catalog-section" id="catalogo">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+        <p class="section-subtitle">Selecciona una categoría y encuentra el equipo ideal para ti</p>
+      </div>
+
+      <!-- Filtro de Categorías -->
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="pesas">Pesas & Mancuernas</button>
+        <button class="filter-btn" data-category="ropa">Ropa Deportiva</button>
+        <button class="filter-btn" data-category="accesorios">Accesorios</button>
+      </div>
+
+      <!-- Grid de Tarjetas de Productos (Renderizados con JS) -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Los productos se cargan automáticamente desde app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN SENA / SOBRE EL CREADOR ================= -->
+  <section class="about-creator" id="aprendiz">
+    <div class="container">
+      <div class="creator-card">
+        <div class="creator-badge">Proyecto Formativo SENA</div>
+        <h2>Sobre el Desarrollador</h2>
+        <p class="creator-desc">
+          Este sitio web fue diseñado y desarrollado como evidencia de aprendizaje, aplicando conceptos fundamentales de desarrollo web moderno: estructura semántica en <strong>HTML5</strong>, diseño responsivo y adaptable con <strong>CSS3 (Flexbox y Grid)</strong>, e interactividad con <strong>JavaScript nativo</strong>.
+        </p>
+
+        <div class="creator-details">
+          <div class="detail-item">
+            <strong>Aprendiz:</strong>
+            <span id="creatorName">[Tu Nombre Completo Aquí]</span>
+          </div>
+          <div class="detail-item">
+            <strong>Programa:</strong>
+            <span>Análisis y Desarrollo de Software (ADSO)</span>
+          </div>
+          <div class="detail-item">
+            <strong>Ficha:</strong>
+            <span>[Número de Ficha SENA]</span>
+          </div>
+          <div class="detail-item">
+            <strong>Institución:</strong>
+            <span>Servicio Nacional de Aprendizaje (SENA)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">¿TIENES DUDAS O QUIERES UN PEDIDO ESPECIAL?</h2>
+        <p class="section-subtitle">Escríbenos directamente y te atenderemos con gusto</p>
+      </div>
+
+      <div class="contact-card">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" placeholder="Ej: Carlos Pérez" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" placeholder="Ej: carlos@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje / Consulta</label>
+            <textarea id="message" rows="4" placeholder="¿Qué producto te interesa?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODAL / DRAWER DEL CARRITO ================= -->
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h3>Tu Carrito de Compras (<span id="cartTotalItems">0</span>)</h3>
+        <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+      </div>
+
+      <!-- Lista de Productos en el Carrito -->
+      <div class="cart-items" id="cartItemsList">
+        <!-- Renderizado dinámicamente con JS -->
+      </div>
+
+      <!-- Resumen y Acciones -->
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Subtotal:</span>
+          <span class="total-price" id="cartTotalPrice">$0 COP</span>
+        </div>
+        <p class="shipping-note">Envío calculado al confirmar por WhatsApp</p>
+
+        <div class="cart-actions">
+          <button class="btn btn-whatsapp btn-block" id="whatsappCheckoutBtn">
+            <span>📲 Comprar por WhatsApp</span>
+          </button>
+          <button class="btn btn-outline btn-block" id="clearCartBtn">Vaciar Carrito</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ================= NOTIFICACIÓN TOAST ================= -->
+  <div class="toast" id="toast">¡Producto agregado al carrito!</div>
+
+  <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Titan<span class="highlight">Fit</span></span>
+        </div>
+        <p>Tu tienda deportiva de confianza para alcanzar tu máximo potencial físico.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#aprendiz">Evidencia SENA</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 TitanFit Store. Proyecto Formativo SENA.</p>
+        <p class="credits">Desarrollado con HTML5, CSS3 y JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script interactivo -->
+  <script src="app.js"></script>
+</body>
+</html>
